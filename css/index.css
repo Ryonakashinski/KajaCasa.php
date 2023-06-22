@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.wrapper {
+  background: #fff;
+  width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* signup form css code */
+.form_signup {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 400px;
+}
+
+.form_signup header {
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form_signup form {
+  margin: 20px 0;
+}
+
+.form_signup .error_txt {
+  color: red;
+  font-family: "";
+  font-weight: bold;
+  background: rgb(248, 177, 177);
+  height: 35px;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 20px;
+  /* not display until error occurs */
+  display: none;
+}
+
+.form_signup form .name_details {
+  display: flex;
+}
+
+form .name_details .field:first-child {
+  margin-right: 10px;
+}
+
+form .name_details .field:last-child {
+  margin-left: 10px;
+}
+.form_signup form .field {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form_signup .field label {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form_signup form .field input {
+  outline: none;
+}
+.form_signup form .field input [type="password"] {
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.form_signup .field input[type="file"] {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+}
+
+.form_signup .field input[type="submit"] {
+  margin-top: 13px;
+  background-color: black;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #f3f3f3;
+  font-weight: bold;
+  padding: 10px;
+  height: 45px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form_signup .field input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form_signup .field input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form_signup .link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form_signup .link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form_signup .field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* toggle button for password */
+.form_signup .field i {
+  position: absolute;
+  right: 8px;
+  color: #ccc;
+  top: 60%;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+/* unicode of an icon */
+.form_signup .field i.active::before {
+  content: "\f070";
+  color: #333;
+}
+
+.form_signup .field input {
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 8px;
+  width: 100%;
+}
+
+/* users area css code */
+.users {
+  padding: 40px 30px;
+}
+
+.users header,
+.users_list a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+:is(.users, .users_list) .content {
+  display: flex;
+  align-items: center;
+}
+.users header .content img {
+  height: 50px;
+  width: 50px;
+}
+
+:is(.users, .users_list) .details {
+  margin-left: 15px;
+}
+
+:is(.users, .users_list) .details span {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.users header .logout {
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 15px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.users .search {
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.users .search .text {
+  font-size: 15px;
+}
+
+.users .search input {
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* when you click magnifying glass icon, the color will be modified. */
+.users .search button {
+  width: 30px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s ease;
+}
+
+.users .search button.active {
+  color: #fff;
+  background: #333;
+}
+
+/* X mark */
+.users .search button.active i::before {
+  content: "\f00d";
+}
+
+/* users_list */
+
+.users_list {
+  max-height: 350px;
+  overflow-y: auto;
+  height: calc(100% -178px);
+}
+
+/* make the scroll bar disappear */
+:is(.users_list, .chat_box) ::-webkit-scrollbar {
+  width: 0px;
+}
+
+.users_list a {
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  padding-right: 15px;
+  border-bottom-color: #f1f1f1;
+}
+
+.users-list a:last-child {
+  border: none;
+  margin-bottom: 0px;
+}
+.users_list a .content img {
+  height: 40px;
+  width: 40px;
+}
+
+.users_list a .content p {
+  color: #67676a;
+}
+
+.users_list a .status-dot {
+  font-size: 12px;
+  color: #468669;
+}
+
+/* use this class name in php to show offline status */
+.users_list a .status-dot.offline {
+  color: #ccc;
+}
+
+/* chat area css code */
+
+.chat_area header {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+
+.chat_area header .back_icon {
+  font-size: 18px;
+  color: #333;
+}
+
+.chat_area header img {
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+
+.chat_area header span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* background */
+.chat_box {
+  height: 500px;
+  /* scrolling  */
+  overflow-y: auto;
+  background: #f37805;
+  padding: 10px 30px 20px 30px;
+  box-shadow: inset 0 32px 32px -32px rgb(0 0 0 /5%),
+    inset 0 -32px 32px -32px rgb(0 0 0/5%);
+}
+
+.chat_box .chat p {
+  /* line-break */
+  word-wrap: break-word;
+  padding: 8px 16px;
+  box-shadow: 0 0 32px rgb(0 0 0 /5%), 0 16px 16px -16px rgb(0 0 0/5%);
+}
+
+.chat_box .outgoing {
+  display: flex;
+}
+
+.outgoing .details {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+
+.outgoing .details p {
+  background: #333;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+}
+
+/* Your friend's response */
+.chat_box .incoming {
+  display: flex;
+  align-items: center;
+}
+
+.chat_box .incoming img {
+  height: 35px;
+  width: 35px;
+}
+
+.incoming .details {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100%-130px);
+}
+
+.incoming .details p {
+  color: #333;
+  background: #fff;
+  border-radius: 18px 18px 18px 0;
+}
+
+.typing_area {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typing_area input {
+  height: 45px;
+  width: calc(100% - 40px);
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.typing_area button {
+  width: 38px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  background: #333;
+  color: #fff;
+  font-size: 17px;
+}
